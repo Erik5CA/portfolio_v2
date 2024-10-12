@@ -14,7 +14,8 @@ const World = () => {
 
   return (
     <Globe
-      ref={glebeRef}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ref={glebeRef as any}
       height={326}
       width={326}
       backgroundColor="rgba(0,0,0,0)"
