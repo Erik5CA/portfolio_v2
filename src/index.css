@@ -35,7 +35,7 @@ body {
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-lg md:text-base w-full block hover:text-white transition-colors;
   }
 
   .nav-sidebar {
@@ -78,7 +78,7 @@ body {
   }
 
   .copy-container {
-    @apply cursor-pointer flex justify-center items-center gap-2;
+    @apply flex justify-center items-center gap-2;
   }
 
   /* projects section  */
