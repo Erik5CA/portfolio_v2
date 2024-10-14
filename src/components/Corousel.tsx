@@ -15,7 +15,7 @@ const sliders = [
   "assets/react-router.svg",
 ];
 
-const Corousel = ({ autoSlide = false, autoSlideSpeed = 3000 }) => {
+const Corousel = ({ autoSlide = false, autoSlideSpeed = 2500 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [showImage, setShowImage] = useState(false);
 
@@ -39,13 +39,16 @@ const Corousel = ({ autoSlide = false, autoSlideSpeed = 3000 }) => {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full md:h-[276px] h-[200px] md:p-16 p-16">
-      <div className="flex h-full">
-        <img
-          className="w-full h-full object-contain copy"
+    <div className="overflow-hidden w-full md:h-[276px] h-[200px] md:p-16 p-14">
+      <div
+        className="flex h-full duration-500 bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${sliders[currentIndex]})` }}
+      >
+        {/* <img
+          className="w-full h-full object-contain copy duration-300"
           src={sliders[currentIndex]}
           alt="logo"
-        />
+        /> */}
       </div>
     </div>
   );
