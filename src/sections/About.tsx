@@ -102,15 +102,17 @@ const About = () => {
               className="w-full md:h-[226px] sm:h-[276px] h-fit object-cover md:object-top"
             />
 
-            <div className="space-y-2">
+            <div className="space-y-2 flex flex-col items-center justify-center">
               <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
-                <img
-                  src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  alt="copy"
-                />
-                <p className="lg:text-xl md:text-base text-sm font-medium text-gray_gradient text-white">
+              <div className="copy-container">
+                <button onClick={handleCopy}>
+                  <img
+                    src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
+                    className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer"
+                    alt="copy"
+                  />
+                </button>
+                <p className="lg:text-xl md:text-base text-base font-medium text-gray_gradient text-white">
                   erik.castillo.anzures@gmail.com
                 </p>
               </div>
