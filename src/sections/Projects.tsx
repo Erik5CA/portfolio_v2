@@ -1,19 +1,68 @@
 import { useState } from "react";
 import { myProjects } from "../constants";
+import { motion, AnimatePresence } from "framer-motion";
 // import { Canvas } from "@react-three/fiber";
 // import { Center, OrbitControls } from "@react-three/drei";
 // import CanvasLoader from "../components/CanvasLoader";
 // import DemoComputer from "../components/DemoComputer";
 
+const slideVariants = {
+  hiddenRight: {
+    x: "100%",
+    opacity: 0,
+  },
+  hiddenLeft: {
+    x: "-100%",
+    opacity: 0,
+  },
+  visible: {
+    x: "0",
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.7,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.9,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const variants = {
+  initial: {
+    opacity: 0.3,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+    },
+  },
+  exit: {
+    opacity: 0.3,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [direction, setDirection] = useState("right");
   const currentProject = myProjects[selectedProjectIndex];
 
   const handleNavigation = (direction: "next" | "previous") => {
     setSelectedProjectIndex((prevIndex) => {
       if (direction === "previous") {
+        setDirection("right");
         return prevIndex === 0 ? myProjects.length - 1 : prevIndex - 1;
       } else {
+        setDirection("left");
         return prevIndex === myProjects.length - 1 ? 0 : prevIndex + 1;
       }
     });
@@ -24,7 +73,14 @@ const Projects = () => {
       <p className="head-text">My Work</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:py-10 p-5 shadow-2xl shadow-black-200">
+        <motion.div
+          className="flex flex-col gap-5 relative sm:py-10 p-5 shadow-2xl shadow-black-200"
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={variants}
+          key={selectedProjectIndex}
+        >
           <div className="absolute top-0 right-0">
             <img
               src={currentProject.spotlight}
@@ -56,7 +112,7 @@ const Projects = () => {
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
                 <div className="tech-logo" key={index}>
-                  <img src={tag.path} alt={tag.name} />
+                  <img src={tag.path} alt={tag.name} width={20} height={20} />
                 </div>
               ))}
             </div>
@@ -98,13 +154,20 @@ const Projects = () => {
               />
             </button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="border border-black-300 bg-black-200 rounded-lg h-60 lg:h-full md:p-5">
-          <div
-            style={{ backgroundImage: `url(${currentProject.texture})` }}
-            className="w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-700"
-          ></div>
+        <div className="relative flex flex-col justify-center items-center border border-black-300 bg-black-200 rounded-lg h-60 lg:h-full md:p-5 overflow-x-hidden">
+          <AnimatePresence>
+            <motion.div
+              key={selectedProjectIndex}
+              style={{ backgroundImage: `url(${currentProject.texture})` }}
+              initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
+              animate="visible"
+              exit="exit"
+              variants={slideVariants}
+              className="absolute p-5 w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat"
+            ></motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>

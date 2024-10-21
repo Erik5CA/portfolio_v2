@@ -8,7 +8,9 @@ const World = () => {
     const globe = glebeRef.current;
     if (globe) {
       globe.controls().autoRotate = true;
-      globe.controls().autoRotateSpeed = 0.9;
+      globe.controls().autoRotateSpeed = 1;
+      globe.controls().enableZoom = false;
+      globe.controls().enablePan = false;
     }
   }, []);
 
