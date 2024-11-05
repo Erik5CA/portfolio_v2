@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const sliders = [
-  "assets/react.svg",
-  "assets/next-js.svg",
-  "assets/typescript.svg",
-  "assets/javascript.svg",
-  "assets/css.svg",
-  "assets/html.svg",
-  "assets/tailwind.svg",
-  "assets/python.svg",
-  "assets/postgresql.svg",
-  "assets/mongo.svg",
-  "assets/redux.svg",
-  "assets/react-router.svg",
+  "assets/techs/react.svg",
+  "assets/techs/next-js.svg",
+  "assets/techs/typescript.svg",
+  "assets/techs/javascript.svg",
+  "assets/techs/css.svg",
+  "assets/techs/html.svg",
+  "assets/techs/tailwind.svg",
+  "assets/techs/python.svg",
+  "assets/techs/postgresql.svg",
+  "assets/techs/mongo.svg",
+  "assets/techs/redux.svg",
+  "assets/techs/react-router.svg",
 ];
 
 const variants = {

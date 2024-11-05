@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { myProjects } from "../constants";
+import { myProjects } from "../constants/projects";
 import { motion, AnimatePresence } from "framer-motion";
 // import { Canvas } from "@react-three/fiber";
 // import { Center, OrbitControls } from "@react-three/drei";
@@ -82,7 +82,11 @@ const Projects = () => {
           key={selectedProjectIndex}
         >
           <div className="absolute top-0 right-0">
-            <img
+            <motion.img
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={variants}
               src={currentProject.spotlight}
               alt="spotlight"
               className="w-full h-96 object-cover rounded-xl -z-10"
@@ -111,9 +115,16 @@ const Projects = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div className="tech-logo" key={index}>
+                <motion.div
+                  className="tech-logo"
+                  key={index}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants={variants}
+                >
                   <img src={tag.path} alt={tag.name} width={20} height={20} />
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -156,7 +167,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        <div className="relative flex flex-col justify-center items-center border border-black-300 bg-black-200 rounded-lg h-60 lg:h-full md:p-5 overflow-x-hidden">
+        <div className="relative flex flex-col justify-center items-center border border-black-300 bg-black-200 rounded-lg h-72 lg:h-full md:p-5 overflow-x-hidden">
           <AnimatePresence>
             <motion.div
               key={selectedProjectIndex}
@@ -165,7 +176,7 @@ const Projects = () => {
               animate="visible"
               exit="exit"
               variants={slideVariants}
-              className="absolute p-5 w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat"
+              className="absolute p-5 w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat aspect-video"
             ></motion.div>
           </AnimatePresence>
         </div>
