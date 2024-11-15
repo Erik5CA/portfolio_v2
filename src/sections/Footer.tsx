@@ -12,7 +12,11 @@ const Footer = () => {
           rel="noreferrer"
           className="social-icon hover:scale-110 transition-all ease-in-out duration-150"
         >
-          <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
+          <img
+            src="/assets/techs/github.svg"
+            alt="github"
+            className="w-1/2 h-1/2"
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/erik-castillo-b48b12239/"
@@ -21,7 +25,7 @@ const Footer = () => {
           className="social-icon hover:scale-110 transition-all ease-in-out duration-150"
         >
           <img
-            src="/assets/linkedin.svg"
+            src="/assets/techs/linkedin.svg"
             alt="linkedin"
             className="w-1/2 h-1/2"
           />

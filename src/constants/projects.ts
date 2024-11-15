@@ -226,4 +226,51 @@ export const myProjects = [
       },
     ],
   },
+  {
+    title: "Threads Clone",
+    desc: "Web application to help you organize your thoughts and ideas. The user can create a thread, add comments. The user can also create a community to share ideas with other users. Fully functional with authentication and user authorization and full responsiveness.",
+    subdesc:
+      "Build using Next.js, MongoDB, Tailwind CSS and Typescript. Authentication with Clerk and handle uploads images with Uploadthing.",
+    href: "https://threads-app-one-rust.vercel.app/",
+    texture: "/project/proyecto7.jpeg",
+    logo: "/project/project-logo7.svg",
+    logoStyle: {
+      backgroundColor: "#6C47FF4D",
+      border: "0.2px solid #6C47FF",
+      boxShadow: "0px 0px 60px 0px #6C47FF4D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/techs/next-js.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "/assets/techs/tailwind.svg",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/techs/typescript.svg",
+      },
+      {
+        id: 4,
+        name: "MongoDB",
+        path: "/assets/techs/mongo.svg",
+      },
+      {
+        id: 5,
+        name: "Clerk",
+        path: "/assets/techs/clerk.svg",
+      },
+      {
+        id: 6,
+        name: "Uploadthing",
+        path: "/assets/techs/uploadthing.svg",
+      },
+    ],
+  },
 ];
