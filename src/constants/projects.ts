@@ -42,6 +42,53 @@ export const myProjects = [
     ],
   },
   {
+    title: "Spotify Clone",
+    desc: "An clone of the Spotify app, with the purpose of learning how to use and implement an API. The user can play song and albums. Implemented a real time feature to display the currently playing song and chat with other users. The app also has a feature for admins to manage the songs and albums.",
+    subdesc:
+      "Built using React, Typescript and Tailwind CSS. The app uses an own API to fetch the data and play the songs. Authentication with Clerk and user authorization.",
+    href: "https://spotify-clone-frontend-tqsh.onrender.com/",
+    texture: "/project/proyecto9.jpeg",
+    logo: "/project/project-logo3.svg",
+    logoStyle: {
+      backgroundColor: "#1DB9545D",
+      border: "0.2px solid #1DB954",
+      boxShadow: "0px 0px 60px 0px #1DB9545D",
+    },
+    spotlight: "/assets/spotlight3.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/techs/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/techs/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/techs/tailwind.svg",
+      },
+      {
+        id: 4,
+        name: "Clerk",
+        path: "/assets/techs/clerk.svg",
+      },
+      {
+        id: 5,
+        name: "MongoDB",
+        path: "/assets/techs/mongo.svg",
+      },
+      {
+        id: 6,
+        name: "Cloudinary",
+        path: "/assets/techs/cloudinary.svg",
+      },
+    ],
+  },
+  {
     title: "Mern Eats",
     desc: "Web application to help you find restaurants in your city. The user can filter restaurants by cuisine, delivery price and estimated delivery time. The user can order the food and pay with a credit card. The app also lets the user create a restaurant to manage the orders and payments.",
     subdesc:
@@ -205,43 +252,7 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   title: "Spotify Search",
-  //   desc: "An application to search for your favorite artist and see his complete discography. The user can browse through all the albums published by the artist and see the songs that make up the album. It also shows the collaborations between other artists.",
-  //   subdesc:
-  //     "Built using React and CSS. Using Spotify API to get the artist, songs and albums data. Disegned to adapt to all types of devices.",
-  //   href: "https://erik5ca.github.io/Spotify-App/",
-  //   texture: "/project/proyecto2.jpeg",
-  //   logo: "/project/project-logo3.svg",
-  //   logoStyle: {
-  //     backgroundColor: "#1DB9545D",
-  //     border: "0.2px solid #1DB954",
-  //     boxShadow: "0px 0px 60px 0px #1DB9545D",
-  //   },
-  //   spotlight: "/assets/spotlight3.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "React.js",
-  //       path: "/assets/techs/react.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TypeScript",
-  //       path: "/assets/techs/typescript.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "CSS",
-  //       path: "/assets/techs/css.svg",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Spotify",
-  //       path: "/assets/techs/spotify.svg",
-  //     },
-  //   ],
-  // },
+
   // {
   //   title: "Where in the World?",
   //   desc: "Web to visualize information about the countries of the world. The user can see the following information about the countries: population, native language, region, capital, currency, border and more. In addition to being able to search and filter by continent.",
