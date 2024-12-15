@@ -18,7 +18,8 @@ const About = () => {
 
   return (
     <section className="c-space my-20" id="about">
-      <motion.div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+      <p className="head-text">About me</p>
+      <motion.div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full mt-12">
         <AboutItem className="col-span-1 xl:row-span-3 ">
           <img
             src="/assets/Designer.png"
@@ -40,11 +41,12 @@ const About = () => {
           <Corousel autoSlide={true} />
 
           <div>
-            <p className="grid-headtext">Tech Stack</p>
+            <p className="grid-headtext">My Objetives</p>
             <p className="grid-subtext">
-              I have worked with a variety of technologies, including React,
-              Next.js, Typescript, Tailwind, MongoDB, PostgreSQL, Python,
-              Javascript and more.
+              My main objectives are to create a user-friendly and intuitive
+              website that provides a seamless experience for users. I strive to
+              deliver high-quality work that is both visually appealing and
+              functional.
             </p>
           </div>
         </AboutItem>
