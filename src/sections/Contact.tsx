@@ -70,9 +70,7 @@ const Contact = () => {
 
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>
-          <p className="text-white-600 text-lg mt-3">
-            Send me a message and let's talk about your project.
-          </p>
+          <p className="text-white-600 text-lg mt-3">Send me a message.</p>
 
           <form
             ref={formRef}
