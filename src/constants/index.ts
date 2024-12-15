@@ -61,22 +61,24 @@ export const calculateSizes = (
 };
 
 export const workExperiences = [
-  {
-    id: 1,
-    name: "Freelance",
-    pos: "Software Developer Freelance",
-    duration: "2023 - Present",
-    title:
-      "I work as a software developer freelance, focusing on web development and design. I have experience with React, Next.js, TypeScript, Tailwind CSS, and GraphQL. I am proficient in frontend.",
-    icon: "/assets/freelance.svg",
-    animation: "victory",
-  },
+  // {
+  //   id: 1,
+  //   name: "Freelance",
+  //   pos: "Software Developer Freelance",
+  //   duration: "2023 - Present",
+  //   title:
+  //     "I work as a software developer freelance, focusing on web development and design. I have experience with React, Next.js, TypeScript, Tailwind CSS, and GraphQL. I am proficient in frontend.",
+  //   icon: "/assets/freelance.svg",
+  //   animation: "victory",
+  // },
   {
     id: 2,
     name: "Research Institute in Applied Mathematics and Systems",
-    pos: "Software Developer",
+    pos: "Algorithm and Electronic Device Developer",
     duration: "2022 - 2023",
-    title: `I designed computer vision algorithms for pest detection using deep learning algorithms for predictive model construction. I designed IoT devices for pest detection and I designed electronic devices for the detection of the passage of pests.`,
+    title: `• Developed computer vision algorithms that improved early pest detection by 30%, optimizing agricultural monitoring.
+• Designed IoT devices for pest tracking and analysis using Raspberry Pi and MQTT.
+• Implemented predictive models based on deep learning, increasing prediction accuracy.`,
     icon: "/assets/iimas.webp",
     animation: "salute",
   },
