@@ -7,6 +7,7 @@ import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TechStack from "./sections/TechStack";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       />
       <Navbar />
       <Hero />
+      <TechStack />
       <About />
       <Projects />
       <Experience />
